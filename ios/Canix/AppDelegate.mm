@@ -65,6 +65,7 @@ static void InitializeFlipper(UIApplication *application) {
 #ifdef FB_SONARKIT_ENABLED
   InitializeFlipper(application);
 #endif
+  
   RCTAppSetupPrepareApp(application);
   RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
   RCTSurfacePresenterBridgeAdapter *_bridgeAdapter;
@@ -79,7 +80,7 @@ static void InitializeFlipper(UIApplication *application) {
   _bridgeAdapter = [[RCTSurfacePresenterBridgeAdapter alloc] initWithBridge:bridge contextContainer:_contextContainer];
   bridge.surfacePresenter = _bridgeAdapter.surfacePresenter;
 
-  UIView *rootView = RCTAppSetupDefaultRootView(bridge, appName, nil);
+  UIView *rootView = [[RCTFabricSurfaceHostingProxyRootView alloc] initWithBridge:bridge moduleName:appName initialProperties:@{}];
 
   if (@available(iOS 13.0, *)) {
       rootView.backgroundColor = [UIColor systemBackgroundColor];
@@ -179,12 +180,13 @@ static void InitializeFlipper(UIApplication *application) {
 
 #pragma mark RCTTurboModuleManagerDelegate
 
-- (Class)getModuleClassFromName:(const char *)name
+
+-(Class)getModuleClassFromName:(const char *)name
 {
   return RCTCoreModulesClassProvider(name);
 }
 
-- (std::shared_ptr<facebook::react::TurboModule>)
+-(std::shared_ptr<facebook::react::TurboModule>)
     getTurboModule:(const std::string &)name
          jsInvoker:(std::shared_ptr<facebook::react::CallInvoker>)jsInvoker {
   return nullptr;

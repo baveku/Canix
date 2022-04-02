@@ -3,7 +3,6 @@ import { useNavigation } from '@react-navigation/core'
 import { Avatar, Box, FlatList, Flex, Text, VStack, HStack } from 'native-base'
 import React, { useEffect, useState } from 'react'
 import { Button, LayoutAnimation, View } from 'react-native'
-import Animated from 'react-native-reanimated'
 import { useRecoilState } from 'recoil'
 import PostCell from './components/post'
 
@@ -37,7 +36,7 @@ function ExplorePage() {
 				contentInset={{ top: 24 }}
 				scrollIndicatorInsets={{ top: 0 }}
 				data={posts}
-				renderScrollComponent={props => <Animated.ScrollView {...props} />}
+				// renderScrollComponent={props => <Animated.ScrollView {...props} />}
 				renderItem={({ item, index }) => <PostCell post={item} imageIndex={item.id} onRemove={() => onRemove(item.id)} />}
 				keyExtractor={(item, ind) => `${item.id}`}
 				// Performance settings

@@ -29,9 +29,9 @@ module.exports = function (api) {
 			},
 		],
 		['@babel/plugin-proposal-decorators', { legacy: true }],
-		'react-native-reanimated/plugin',
+		// 'react-native-reanimated/plugin',
 		'@babel/plugin-proposal-class-properties',
-		'./node_modules/react-native/packages/babel-plugin-codegen'
+		'babel-plugin-codegen'
 	]
 
 	if (process.env.ENV === 'production') {

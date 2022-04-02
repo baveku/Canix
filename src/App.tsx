@@ -32,7 +32,6 @@ import Onboarding from '@pages/other/onboarding'
 import { StorageKey, UserWorkflowState } from '@storage'
 import { RootStackParamList } from '@router'
 import SelectLanguagePage from '@pages/other/selectlanguage'
-import { BottomSheetModalProvider } from '@gorhom/bottom-sheet'
 
 const MainStack = createNativeStackNavigator<ReactNavigation.RootParamList>()
 
@@ -87,28 +86,26 @@ const App = () => {
 	}
 
 	return (
-		<BottomSheetModalProvider>
-			<NativeBaseProvider theme={mainTheme}>
-				<NavigationContainer
-					ref={navigationRef}
-					onReady={onReady}
+		<NativeBaseProvider theme={mainTheme}>
+			<NavigationContainer
+				ref={navigationRef}
+				onReady={onReady}
 
-					onStateChange={onStateChange}
-				>
-					<StatusBar barStyle='dark-content' />
-					<MainStack.Navigator
-						screenOptions={{ headerShown: false }}
-						initialRouteName={getInitialRoute()}>
-						<MainStack.Screen name='Onboarding' component={Onboarding} />
-						<MainStack.Screen name='SelectLanguage' component={SelectLanguagePage} />
-						<MainStack.Screen name="Tab" component={TabScreen} />
-						<MainStack.Group screenOptions={{ presentation: 'fullScreenModal' }}>
-							<MainStack.Screen name="Auth" component={AuthStack} />
-						</MainStack.Group>
-					</MainStack.Navigator>
-				</NavigationContainer>
-			</NativeBaseProvider>
-		</BottomSheetModalProvider>
+				onStateChange={onStateChange}
+			>
+				<StatusBar barStyle='dark-content' />
+				<MainStack.Navigator
+					screenOptions={{ headerShown: false }}
+					initialRouteName={getInitialRoute()}>
+					<MainStack.Screen name='Onboarding' component={Onboarding} />
+					<MainStack.Screen name='SelectLanguage' component={SelectLanguagePage} />
+					<MainStack.Screen name="Tab" component={TabScreen} />
+					<MainStack.Group screenOptions={{ presentation: 'fullScreenModal' }}>
+						<MainStack.Screen name="Auth" component={AuthStack} />
+					</MainStack.Group>
+				</MainStack.Navigator>
+			</NavigationContainer>
+		</NativeBaseProvider>
 	)
 }
 

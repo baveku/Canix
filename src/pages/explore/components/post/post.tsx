@@ -1,7 +1,6 @@
 import { Post } from '@models'
 import { Box, VStack, HStack, Avatar, Image, Skeleton, Button, Heading, Icon, Text, TextArea } from 'native-base'
 import React, { useEffect, useState } from 'react'
-import Animated, { FadeInUp, FadeOutDown, Layout } from 'react-native-reanimated'
 import { StyleSheet } from 'react-native'
 import FastImage from 'react-native-fast-image'
 import { AntDesign, Octicons } from '@components/fonts'
