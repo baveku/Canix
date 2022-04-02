@@ -1,0 +1,11 @@
+{
+	"files.exclude": {
+		"**/node_modules": true,
+		"**/Pods": true,
+		"**/ios/Build": true
+	},
+	"editor.formatOnSave": true,
+	"cSpell.words": [
+		"coinchecker"
+	]
+}

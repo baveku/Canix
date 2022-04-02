@@ -1,0 +1,23 @@
+{
+	"root": true,
+		"extends": [
+			"@react-native-community",
+			"prettier"
+		],
+			"parser": "@typescript-eslint/parser",
+				"plugins": [
+					"prettier",
+					"@typescript-eslint"
+				],
+					"rules": {
+		"react/prop-types": "off",
+			"no-unused-vars": [
+				"error",
+				{
+					"vars": "off"
+				}
+			],
+				"no-use-before-define": "off",
+					"@typescript-eslint/no-unused-vars": "off"
+	}
+}

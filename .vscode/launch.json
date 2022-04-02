@@ -1,0 +1,25 @@
+{
+	"configurations": [
+		{
+			"name": "iOS Device",
+			"request": "launch",
+			"type": "reactnativedirect",
+			"cwd": "${workspaceFolder}",
+			"platform": "ios",
+			"target": "device",
+			"env": {
+				"ENVFILE": "${workspaceFolder}/.env.dev"
+			}
+		},
+		{
+			"name": "iOS Simulator",
+			"request": "launch",
+			"type": "reactnativedirect",
+			"cwd": "${workspaceFolder}",
+			"platform": "ios",
+			"env": {
+				"ENVFILE": "${workspaceFolder}/.env.dev"
+			}
+		}
+	]
+}

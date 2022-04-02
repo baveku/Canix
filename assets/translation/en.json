@@ -1,0 +1,15 @@
+{
+	"common": {
+		"Hello": "Hello",
+		"explore": "Explore",
+		"home": "Home",
+		"profile": "Profile",
+		"message": "Message",
+		"language": "Language",
+		"login": "Login"
+	},
+	"select_language": {
+		"title": "Choose your preferred\nLanguage",
+		"subtitle": "You will use the same language through the app"
+	}
+}

@@ -1,0 +1,15 @@
+{
+	"common": {
+		"Hello": "Xin chao",
+		"explore": "Mở rộng",
+		"home": "Trang chủ",
+		"profile": "Cá nhân",
+		"message": "Tin nhắn",
+		"language": "Ngôn ngữ",
+		"login": "Đăng nhập"
+	},
+	"select_language": {
+		"title": "Chọn ngôn ngữ trước khi\nbắt đầu",
+		"subtitle": "Bạn sẽ sử dụng ngôn ngữ này cho toàn bộ ứng dụng"
+	}
+}
