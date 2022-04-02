@@ -38,6 +38,7 @@
 }
 @end
 
+#if DEBUG
 #ifdef FB_SONARKIT_ENABLED
 #import <FlipperKit/FlipperClient.h>
 #import <FlipperKitLayoutPlugin/FlipperKitLayoutPlugin.h>
@@ -56,31 +57,24 @@ static void InitializeFlipper(UIApplication *application) {
   [client start];
 }
 #endif
+#endif
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-	RCTEnableTurboModule(YES);
-#ifdef FB_SONARKIT_ENABLED
-  InitializeFlipper(application);
-#endif
-  
   RCTAppSetupPrepareApp(application);
   RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
-  RCTSurfacePresenterBridgeAdapter *_bridgeAdapter;
-  std::shared_ptr<const facebook::react::ReactNativeConfig> _reactNativeConfig;
-  facebook::react::ContextContainer::Shared _contextContainer;
 
   // Find a line that define rootView and replace/edit with the following lines.
   NSString *appName = [ReactNativeConfig envFor:@"APP_NAME"];
-   _contextContainer = std::make_shared<facebook::react::ContextContainer const>();
+  _contextContainer = std::make_shared<facebook::react::ContextContainer const>();
   _reactNativeConfig = std::make_shared<facebook::react::EmptyReactNativeConfig const>();
   _contextContainer->insert("ReactNativeConfig", _reactNativeConfig);
   _bridgeAdapter = [[RCTSurfacePresenterBridgeAdapter alloc] initWithBridge:bridge contextContainer:_contextContainer];
   bridge.surfacePresenter = _bridgeAdapter.surfacePresenter;
 
-  UIView *rootView = [[RCTFabricSurfaceHostingProxyRootView alloc] initWithBridge:bridge moduleName:appName initialProperties:@{}];
+  UIView *rootView = RCTAppSetupDefaultRootView(bridge, appName, nil);
 
   if (@available(iOS 13.0, *)) {
       rootView.backgroundColor = [UIColor systemBackgroundColor];
@@ -97,6 +91,11 @@ static void InitializeFlipper(UIApplication *application) {
   rootViewController.view = rootView;
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
+  #if DEBUG
+  #ifdef FB_SONARKIT_ENABLED
+  	InitializeFlipper(application);
+  #endif
+  #endif
   return YES;
 }
 
@@ -136,85 +135,35 @@ static void InitializeFlipper(UIApplication *application) {
 
 - (std::unique_ptr<facebook::react::JSExecutorFactory>)jsExecutorFactoryForBridge:(RCTBridge *)bridge
 {
-  // Add these lines to create a TurboModuleManager
-  if (RCTTurboModuleEnabled()) {
-    _turboModuleManager =
-        [[RCTTurboModuleManager alloc] initWithBridge:bridge
-                                             delegate:self
-                                            jsInvoker:bridge.jsCallInvoker];
-
-    // Necessary to allow NativeModules to lookup TurboModules
-    [bridge setRCTTurboModuleRegistry:_turboModuleManager];
-
-    if (!RCTTurboModuleEagerInitEnabled()) {
-      /**
-       * Instantiating DevMenu has the side-effect of registering
-       * shortcuts for CMD + d, CMD + i,  and CMD + n via RCTDevMenu.
-       * Therefore, when TurboModules are enabled, we must manually create this
-       * NativeModule.
-       */
-       [_turboModuleManager moduleForName:"DevMenu"];
-    }
-  }
-
-  // Add this line...
-  __weak __typeof(self) weakSelf = self;
-
-  // If you want to use the `JSCExecutorFactory`, remember to add the `#import <React/JSCExecutorFactory.h>`
-  // import statement on top.
-  return std::make_unique<facebook::react::HermesExecutorFactory>(
-    facebook::react::RCTJSIExecutorRuntimeInstaller([weakSelf, bridge](facebook::jsi::Runtime &runtime) {
-      if (!bridge) {
-        return;
-      }
-
-      // And add these lines to install the bindings...
-      __typeof(self) strongSelf = weakSelf;
-      if (strongSelf) {
-        facebook::react::RuntimeExecutor syncRuntimeExecutor =
-            [&](std::function<void(facebook::jsi::Runtime & runtime_)> &&callback) { callback(runtime); };
-        [strongSelf->_turboModuleManager installJSBindingWithRuntimeExecutor:syncRuntimeExecutor];
-      }
-    }));
+  _turboModuleManager = [[RCTTurboModuleManager alloc] initWithBridge:bridge
+                                                             delegate:self
+                                                            jsInvoker:bridge.jsCallInvoker];
+  return RCTAppSetupDefaultJsExecutorFactory(bridge, _turboModuleManager);
 }
 
 #pragma mark RCTTurboModuleManagerDelegate
 
-
--(Class)getModuleClassFromName:(const char *)name
+- (Class)getModuleClassFromName:(const char *)name
 {
   return RCTCoreModulesClassProvider(name);
 }
 
--(std::shared_ptr<facebook::react::TurboModule>)
-    getTurboModule:(const std::string &)name
-         jsInvoker:(std::shared_ptr<facebook::react::CallInvoker>)jsInvoker {
+- (std::shared_ptr<facebook::react::TurboModule>)getTurboModule:(const std::string &)name
+                                                      jsInvoker:(std::shared_ptr<facebook::react::CallInvoker>)jsInvoker
+{
+  return nullptr;
+}
+
+- (std::shared_ptr<facebook::react::TurboModule>)getTurboModule:(const std::string &)name
+                                                     initParams:
+                                                         (const facebook::react::ObjCTurboModule::InitParams &)params
+{
   return nullptr;
 }
 
 - (id<RCTTurboModule>)getModuleInstanceFromClass:(Class)moduleClass
 {
-  // Set up the default RCTImageLoader and RCTNetworking modules.
-  if (moduleClass == RCTImageLoader.class) {
-    return [[moduleClass alloc] initWithRedirectDelegate:nil
-        loadersProvider:^NSArray<id<RCTImageURLLoader>> *(RCTModuleRegistry * moduleRegistry) {
-          return @ [[RCTLocalAssetImageLoader new]];
-        }
-        decodersProvider:^NSArray<id<RCTImageDataDecoder>> *(RCTModuleRegistry * moduleRegistry) {
-          return @ [[RCTGIFImageDecoder new]];
-        }];
-  } else if (moduleClass == RCTNetworking.class) {
-     return [[moduleClass alloc]
-        initWithHandlersProvider:^NSArray<id<RCTURLRequestHandler>> *(
-            RCTModuleRegistry *moduleRegistry) {
-          return @[
-            [RCTHTTPRequestHandler new],
-            [RCTDataRequestHandler new],
-            [RCTFileRequestHandler new],
-          ];
-        }];
-  }
-  // No custom initializer here.
-  return [moduleClass new];
+  return RCTAppSetupDefaultModuleFromClass(moduleClass);
 }
+
 @end

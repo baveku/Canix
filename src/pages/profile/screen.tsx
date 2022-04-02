@@ -5,7 +5,7 @@ import { StyleSheet, Text, View } from 'react-native'
 export default function ProfileScreen() {
 	const { t } = useTranslation('common')
 	return (
-		<View style={style.container}>
+		<View>
 			<Text>Hello</Text>
 		</View>
 	)

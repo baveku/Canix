@@ -12,9 +12,7 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 
 function HomePage() {
 	return (
-		<SafeAreaView>
-			<PlayerButton></PlayerButton>
-		</SafeAreaView>
+		<View></View>
 	)
 }
 

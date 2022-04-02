@@ -32,20 +32,6 @@ function ExplorePage() {
 
 	return (
 		<Box flex="1">
-			<FlatList backgroundColor={'white'} style={{ flex: 1 }}
-				contentInset={{ top: 24 }}
-				scrollIndicatorInsets={{ top: 0 }}
-				data={posts}
-				// renderScrollComponent={props => <Animated.ScrollView {...props} />}
-				renderItem={({ item, index }) => <PostCell post={item} imageIndex={item.id} onRemove={() => onRemove(item.id)} />}
-				keyExtractor={(item, ind) => `${item.id}`}
-				// Performance settings
-				removeClippedSubviews={true} // Unmount components when outside of window
-				initialNumToRender={6} // Reduce initial render amount
-				maxToRenderPerBatch={2} // Reduce number in each render batch
-				updateCellsBatchingPeriod={100} // Increase time between renders
-				windowSize={6}
-			/>
 		</Box>
 	)
 }

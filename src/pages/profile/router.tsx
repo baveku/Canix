@@ -8,7 +8,7 @@ const ProfileStack = createNativeStackNavigator<ProfileParamList>()
 export default function ProfileTab() {
 	return (
 		<ProfileStack.Navigator>
-			<ProfileStack.Screen name="Main" component={ProfileScreen} />
+			<ProfileStack.Screen name="ProfilePage" component={ProfileScreen} />
 		</ProfileStack.Navigator>
 	)
 }
