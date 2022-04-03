@@ -10,14 +10,7 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <React/RCTLinkingManager.h>
 
-#import <React/RCTDataRequestHandler.h>
-#import <React/RCTHTTPRequestHandler.h>
-#import <React/RCTFileRequestHandler.h>
-#import <React/RCTNetworking.h>
-#import <React/RCTImageLoader.h>
-#import <React/RCTGIFImageDecoder.h>
-#import <React/RCTLocalAssetImageLoader.h>
-
+#if RCT_NEW_ARCH_ENABLED
 #import <React/CoreModulesPlugins.h>
 #import <React/RCTCxxBridgeDelegate.h>
 #import <React/RCTFabricSurfaceHostingProxyRootView.h>
@@ -27,9 +20,6 @@
 
 #import <react/config/ReactNativeConfig.h>
 
-#import <reacthermes/HermesExecutorFactory.h>
-#import <React/RCTJSIExecutorRuntimeInstaller.h>
-
 @interface AppDelegate () <RCTCxxBridgeDelegate, RCTTurboModuleManagerDelegate> {
   RCTTurboModuleManager *_turboModuleManager;
   RCTSurfacePresenterBridgeAdapter *_bridgeAdapter;
@@ -37,6 +27,7 @@
   facebook::react::ContextContainer::Shared _contextContainer;
 }
 @end
+#endif
 
 #if DEBUG
 #ifdef FB_SONARKIT_ENABLED
@@ -68,11 +59,13 @@ static void InitializeFlipper(UIApplication *application) {
 
   // Find a line that define rootView and replace/edit with the following lines.
   NSString *appName = [ReactNativeConfig envFor:@"APP_NAME"];
+  #if RCT_NEW_ARCH_ENABLED
   _contextContainer = std::make_shared<facebook::react::ContextContainer const>();
   _reactNativeConfig = std::make_shared<facebook::react::EmptyReactNativeConfig const>();
   _contextContainer->insert("ReactNativeConfig", _reactNativeConfig);
   _bridgeAdapter = [[RCTSurfacePresenterBridgeAdapter alloc] initWithBridge:bridge contextContainer:_contextContainer];
   bridge.surfacePresenter = _bridgeAdapter.surfacePresenter;
+  #endif
 
   UIView *rootView = RCTAppSetupDefaultRootView(bridge, appName, nil);
 
@@ -131,6 +124,8 @@ static void InitializeFlipper(UIApplication *application) {
   return NO;
 }
 
+#if RCT_NEW_ARCH_ENABLED
+
 #pragma mark - RCTCxxBridgeDelegate
 
 - (std::unique_ptr<facebook::react::JSExecutorFactory>)jsExecutorFactoryForBridge:(RCTBridge *)bridge
@@ -165,5 +160,7 @@ static void InitializeFlipper(UIApplication *application) {
 {
   return RCTAppSetupDefaultModuleFromClass(moduleClass);
 }
+
+#endif
 
 @end
