@@ -68,20 +68,20 @@ const App = () => {
 
 	const getInitialRoute = () => {
 		let currentRouteName: keyof (RootStackParamList) = 'Onboarding'
-		// switch (userWorkflow) {
-		// 	case UserWorkflowState.SELECT_LANG:
-		// 		currentRouteName = 'SelectLanguage'
-		// 		break
-		// 	case UserWorkflowState.HOME:
-		// 		currentRouteName = 'Tab'
-		// 		break
-		// 	case UserWorkflowState.LOGIN:
-		// 		currentRouteName = 'Tab'
-		// 		break
-		// 	default:
-		// 		currentRouteName = 'Onboarding'
-		// 		break
-		// }
+		switch (userWorkflow) {
+			case UserWorkflowState.SELECT_LANG:
+				currentRouteName = 'SelectLanguage'
+				break
+			case UserWorkflowState.HOME:
+				currentRouteName = 'Tab'
+				break
+			case UserWorkflowState.LOGIN:
+				currentRouteName = 'Tab'
+				break
+			default:
+				currentRouteName = 'Onboarding'
+				break
+		}
 		return currentRouteName
 	}
 
@@ -90,7 +90,6 @@ const App = () => {
 			<NavigationContainer
 				ref={navigationRef}
 				onReady={onReady}
-
 				onStateChange={onStateChange}
 			>
 				<StatusBar barStyle='dark-content' />
