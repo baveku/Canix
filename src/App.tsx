@@ -114,7 +114,7 @@ function RecoilApp() {
 			<I18nextProvider i18n={i18n}>
 				<App />
 			</I18nextProvider>
-		</RecoilRoot>
+		</RecoilRoot >
 	)
 }
 export default RecoilApp

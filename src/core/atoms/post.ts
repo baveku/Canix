@@ -1,9 +1,9 @@
 import { atom } from 'recoil'
 import { Post, POSTS_MOCK } from '@models'
 
-export const postsState = atom({
+export const postsState = atom<Post[]>({
 	key: 'LIST_POST',
-	default: POSTS_MOCK
+	default: []
 })
 
 function deletePost(current: Post[], id: number): Post[] {

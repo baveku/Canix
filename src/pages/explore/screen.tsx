@@ -8,7 +8,7 @@ import PostCell from './components/post'
 
 function ExplorePage() {
 
-	const post = useRecoilValue(postsState)
+	const [posts, setPosts] = useRecoilState(postsState)
 
 	const navigation = useNavigation()
 
