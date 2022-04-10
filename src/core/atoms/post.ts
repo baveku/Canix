@@ -3,7 +3,7 @@ import { Post, POSTS_MOCK } from '@models'
 
 export const postsState = atom<Post[]>({
 	key: 'LIST_POST',
-	default: []
+	default: POSTS_MOCK
 })
 
 function deletePost(current: Post[], id: number): Post[] {

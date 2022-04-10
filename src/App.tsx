@@ -22,7 +22,6 @@ import analytics from '@react-native-firebase/analytics'
 import { mainTheme } from '@components/theme'
 import { RecoilRoot, useSetRecoilState } from 'recoil'
 import { navigateState } from '@atoms'
-import RecoilFlipperClient from './tools/recoil'
 import { StatusBar } from 'react-native'
 import { I18nextProvider, useTranslation } from 'react-i18next'
 import i18n from './tools/i18n'
@@ -31,6 +30,7 @@ import Onboarding from '@pages/other/onboarding'
 import { StorageKey, UserWorkflowState } from '@storage'
 import { RootStackParamList } from '@router'
 import SelectLanguagePage from '@pages/other/selectlanguage'
+import RecoilFlipperClient from './tools/recoil'
 
 const MainStack = createNativeStackNavigator<ReactNavigation.RootParamList>()
 
