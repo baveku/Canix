@@ -3,11 +3,12 @@ import { useNavigation } from '@react-navigation/core'
 import { Avatar, Box, FlatList, Flex, Text, VStack, HStack } from 'native-base'
 import React, { useEffect, useState } from 'react'
 import { Button, LayoutAnimation, View } from 'react-native'
-import { useRecoilState } from 'recoil'
+import { useRecoilState, useRecoilCallback, useRecoilValue } from 'recoil'
 import PostCell from './components/post'
 
 function ExplorePage() {
-	const [posts, setPosts] = useRecoilState(postsState)
+
+	const post = useRecoilValue(postsState)
 
 	const navigation = useNavigation()
 
@@ -31,8 +32,8 @@ function ExplorePage() {
 	}
 
 	return (
-		<Box flex="1">
-		</Box>
+		<View>
+		</View>
 	)
 }
 

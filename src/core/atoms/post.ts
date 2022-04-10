@@ -1,7 +1,7 @@
 import { atom } from 'recoil'
 import { Post, POSTS_MOCK } from '@models'
 
-export const postsState = atom<Post[]>({
+export const postsState = atom({
 	key: 'LIST_POST',
 	default: POSTS_MOCK
 })
