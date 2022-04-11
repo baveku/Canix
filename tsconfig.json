@@ -59,9 +59,6 @@
 			"@models": [
 				"./src/core/models"
 			],
-			"@storage/*": [
-				"./src/core/storage/*"
-			],
 			"@storage": [
 				"./src/core/storage"
 			],
@@ -80,8 +77,14 @@
 			"@shared/*": [
 				"./src/shared/*"
 			],
-			"@atoms": [
-				"./src/core/atoms"
+			"@hooks": [
+				"src/core/hooks.ts"
+			],
+			"@redux.store": [
+				"src/core/store.ts"
+			],
+			"@slices": [
+				"src/core/slices"
 			],
 			"@selectors": [
 				"./src/core/selectors"

@@ -1,4 +1,4 @@
-import { postsState, PostAction } from '@atoms'
+import { postsState, PostAction } from 'src/core/slices'
 import { Post } from '@models'
 import FeedCell from '../explore/components/post'
 import { useNavigation } from '@react-navigation/core'

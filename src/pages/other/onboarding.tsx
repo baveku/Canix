@@ -16,7 +16,7 @@ export default function OnboardingPage() {
 	}
 
 	return (
-		<Center style={{ backgroundColor: theme.colors.primary }} flex='1'>
+		<Center style={{ backgroundColor: theme.colors.primary[900] }} flex='1'>
 			<Images.Onboarding />
 			<VStack height={'6'} />
 			<VStack margin='2.5'>

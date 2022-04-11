@@ -13,5 +13,5 @@ enum UserWorkflowState {
 	LOGIN = 'LOGIN',
 	HOME = 'HOME',
 }
-
-export { StorageKey, UserWorkflowState }
+const storage = new MMKV()
+export { StorageKey, UserWorkflowState, storage }

@@ -20,8 +20,6 @@ import { useFlipper } from '@react-navigation/devtools'
 import { NativeBaseProvider } from 'native-base'
 import analytics from '@react-native-firebase/analytics'
 import { mainTheme } from '@components/theme'
-import { RecoilRoot, useSetRecoilState } from 'recoil'
-import { navigateState } from '@atoms'
 import { StatusBar } from 'react-native'
 import { I18nextProvider, useTranslation } from 'react-i18next'
 import i18n from './tools/i18n'
@@ -30,16 +28,19 @@ import Onboarding from '@pages/other/onboarding'
 import { StorageKey, UserWorkflowState } from '@storage'
 import { RootStackParamList } from '@router'
 import SelectLanguagePage from '@pages/other/selectlanguage'
-import RecoilFlipperClient from './tools/recoil'
+import { useAppDispatch, useAppSelector } from '@hooks'
+import { Provider } from 'react-redux'
+import { store } from '@redux.store'
+import { navigationSlice } from '@slices'
 
 const MainStack = createNativeStackNavigator<ReactNavigation.RootParamList>()
 
 const App = () => {
 	const routeNameRef = React.useRef<string>()
 	const navigationRef = useNavigationContainerRef()
-	const setNavigationState = useSetRecoilState(navigateState)
 	const { t, i18n } = useTranslation()
-	const [userWorkflow, setUserWorkflow] = useMMKVString(StorageKey.USER_WORKFLOW)
+	const dispatch = useAppDispatch()
+	const userWorkflow = useAppSelector(state => state.navigation.current)
 
 	useFlipper(navigationRef)
 	const onReady = () => {
@@ -60,9 +61,7 @@ const App = () => {
 			})
 		}
 		routeNameRef.current = currentRouteName
-		setNavigationState(current => {
-			return { ...current, currentRouteName: currentRouteName }
-		})
+		dispatch(navigationSlice.actions.updateCurrentRoute(currentRouteName))
 	}
 
 	const getInitialRoute = () => {
@@ -109,12 +108,11 @@ const App = () => {
 
 function RecoilApp() {
 	return (
-		<RecoilRoot>
-			<RecoilFlipperClient />
+		<Provider store={store}>
 			<I18nextProvider i18n={i18n}>
 				<App />
 			</I18nextProvider>
-		</RecoilRoot >
+		</Provider >
 	)
 }
 export default RecoilApp

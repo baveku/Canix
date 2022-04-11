@@ -7,6 +7,8 @@ import { useNavigation } from '@react-navigation/native'
 import { Image, SvgProps } from 'react-native-svg'
 import { useMMKVString } from 'react-native-mmkv'
 import { StorageKey, UserWorkflowState } from '@storage'
+import { useAppDispatch } from '@hooks'
+import { navigationSlice } from '@slices'
 
 enum SupportLanguages {
 	en = 'en',
@@ -17,7 +19,7 @@ export default function SelectLanguagePage() {
 	const theme = useTheme()
 	const navigation = useNavigation()
 	const { t, i18n } = useTranslation()
-	const [userWorkflow, setUserWorkflow] = useMMKVString(StorageKey.USER_WORKFLOW)
+	const dispatch = useAppDispatch()
 	const [lang, setLang] = useMMKVString(StorageKey.LANGUAGE)
 
 	const getLangTitle = (language: SupportLanguages): { la: string, type: SupportLanguages, flag: React.FC<SvgProps> } => {
@@ -52,7 +54,7 @@ export default function SelectLanguagePage() {
 	}
 
 	const onPressLogin = () => {
-		setUserWorkflow(UserWorkflowState.LOGIN)
+		dispatch(navigationSlice.actions.updateUserWorkFlow(UserWorkflowState.LOGIN))
 		navigation.reset({ index: 0, routes: [{ name: 'Tab' }, { name: 'Auth', params: { screen: 'Login' } }] })
 	}
 

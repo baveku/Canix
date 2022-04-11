@@ -23,8 +23,10 @@ module.exports = function (api) {
 					'@router': './src/router',
 					'@storage': './src/core/storage',
 					'@shared': './src/shared',
-					'@atoms': './src/core/atoms',
-					'@selectors': './src/core/selectors'
+					'@hooks': './src/core/hooks.ts',
+					'@redux.store': './src/core/store.ts',
+					'@selectors': './src/core/selectors',
+					'@slices': './src/core/slices'
 				},
 			},
 		],
