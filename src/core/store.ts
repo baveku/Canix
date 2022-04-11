@@ -11,7 +11,7 @@ const reducers = combineReducers({
 const middlewares: Middleware[] = []
 
 if (__DEV__) {
-	const createDebugger = require("redux-flipper").default
+	const createDebugger = require("redux-flipper-colorized").default
 	middlewares.push(createDebugger())
 }
 

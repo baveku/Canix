@@ -1500,7 +1500,7 @@
     "@react-aria/utils" "^3.6.0"
     "@react-native-aria/utils" "^0.2.6"
 
-"@react-native-aria/listbox@0.2.4-alpha.3":
+"@react-native-aria/listbox@^0.2.4-alpha.3":
   version "0.2.4-alpha.3"
   resolved "https://registry.yarnpkg.com/@react-native-aria/listbox/-/listbox-0.2.4-alpha.3.tgz#1a8df0de6c932c8143ea73e43713a5d37070203c"
   integrity sha512-e/y+Wdoyy/PbpFj4DVYDYMsKI+uUqnZ/0yLByqHQvzs8Ys8o69CQkyEYzHhxvFT5lCLegkLbuQN2cJd8bYNQsA==
@@ -6983,10 +6983,10 @@ nanomatch@^1.2.9:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
-native-base@^3.3.7:
-  version "3.3.10"
-  resolved "https://registry.yarnpkg.com/native-base/-/native-base-3.3.10.tgz#cba0998957246a06396f28e1f17114b989066eb0"
-  integrity sha512-NI2g7cf2mYnpMaIqPHGPAPm06Ao1k35RIpI8wV2872eD3HFWVqKS5Jo8XVxJBprGa/FyBlw+lX19UHvXB4SrMA==
+native-base@^3.4.0:
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/native-base/-/native-base-3.4.0.tgz#f63cfb08b341b5455c209d18c89707cac19635d2"
+  integrity sha512-bqb8bM6AKaPV8ovlFCnL7LjX2nEIspxnqNuEgUtILB1EOxNtnnDmgXKo/+e0G2FSBmtvP7wy8crfLYVAJOXX1A==
   dependencies:
     "@react-aria/focus" "^3.2.3"
     "@react-aria/utils" "^3.6.0"
@@ -6996,7 +6996,7 @@ native-base@^3.3.7:
     "@react-native-aria/combobox" "^0.2.4-alpha.0"
     "@react-native-aria/focus" "^0.2.4"
     "@react-native-aria/interactions" "^0.2.2"
-    "@react-native-aria/listbox" "0.2.4-alpha.3"
+    "@react-native-aria/listbox" "^0.2.4-alpha.3"
     "@react-native-aria/overlays" "0.3.3-rc.0"
     "@react-native-aria/radio" "^0.2.4"
     "@react-native-aria/slider" "^0.2.5-alpha.1"
@@ -8037,10 +8037,10 @@ recast@^0.20.4:
     source-map "~0.6.1"
     tslib "^2.0.1"
 
-redux-flipper@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/redux-flipper/-/redux-flipper-2.0.1.tgz#a43603a13e6f06a48c627ae7c144579bd4f1fa54"
-  integrity sha512-JqgnL+fUp3h2fPQRszItLkarTbIf5gjU4Sn0IY/ZxUo6oUUmMh4Lx2J7BBy78cE8KEW9prRRpvJ6NH2uc/QktA==
+redux-flipper-colorized@^2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/redux-flipper-colorized/-/redux-flipper-colorized-2.0.5.tgz#bc4eb702f743fb4388efc42ccfed4ebb87370f2e"
+  integrity sha512-Zx2fTQLuvquNQl0pqAjI3Pb9b/PVyYrmioTa6VX+SMhrD7S6tratVIPjlzmeshFvwlXI0h7sEDm8fwRO/UXFnA==
   dependencies:
     cycle "^1.0.3"
     dayjs "^1.8.29"
