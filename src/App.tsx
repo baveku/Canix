@@ -40,7 +40,7 @@ const App = () => {
 	const navigationRef = useNavigationContainerRef()
 	const { t, i18n } = useTranslation()
 	const dispatch = useAppDispatch()
-	const userWorkflow = useAppSelector(state => state.navigation.current)
+	const userWorkflow = useAppSelector(state => state.navigation.workflow)
 
 	useFlipper(navigationRef)
 	const onReady = () => {
@@ -61,7 +61,6 @@ const App = () => {
 			})
 		}
 		routeNameRef.current = currentRouteName
-		dispatch(navigationSlice.actions.updateCurrentRoute(currentRouteName))
 	}
 
 	const getInitialRoute = () => {
@@ -106,7 +105,7 @@ const App = () => {
 	)
 }
 
-function RecoilApp() {
+function MainApp() {
 	return (
 		<Provider store={store}>
 			<I18nextProvider i18n={i18n}>
@@ -115,4 +114,4 @@ function RecoilApp() {
 		</Provider >
 	)
 }
-export default RecoilApp
+export default MainApp

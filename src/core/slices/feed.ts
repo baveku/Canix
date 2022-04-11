@@ -1,4 +1,4 @@
-import { GlobalNew, mock_news } from 'src/core/models/global.news'
+import { GlobalNew, mock_news } from '@models'
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 export interface FeedState {

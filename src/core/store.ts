@@ -1,4 +1,4 @@
-import { combineReducers, configureStore } from '@reduxjs/toolkit'
+import { combineReducers, configureStore, Middleware } from '@reduxjs/toolkit'
 import { feedSlice, homeSlice, postsSlice, uiconfigSlice, navigationSlice } from '@slices'
 
 const reducers = combineReducers({
@@ -8,8 +8,17 @@ const reducers = combineReducers({
 	posts: postsSlice.reducer,
 	uiconfig: uiconfigSlice.reducer
 })
+const middlewares: Middleware[] = []
+
+if (__DEV__) {
+	const createDebugger = require("redux-flipper").default
+	middlewares.push(createDebugger())
+}
+
+
 export const store = configureStore({
-	reducer: reducers
+	reducer: reducers,
+	middleware: middlewares
 })
 
 // Infer the `RootState` and `AppDispatch` types from the store itself
