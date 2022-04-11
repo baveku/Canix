@@ -1,4 +1,4 @@
-import { combineReducers, configureStore, Middleware } from '@reduxjs/toolkit'
+import { combineReducers, configureStore, Middleware, Slice } from '@reduxjs/toolkit'
 import { feedSlice, homeSlice, postsSlice, uiconfigSlice, navigationSlice } from '@slices'
 
 const reducers = combineReducers({
