@@ -15,8 +15,11 @@ const navigationSlice = createSlice({
 	initialState,
 	reducers: {
 		updateUserWorkFlow(state, action: PayloadAction<string>) {
-			state.current = action.payload
+			state.workflow = action.payload
 			storage.set(StorageKey.USER_WORKFLOW, action.payload)
+		},
+		updateCurrentRoute(state, action: PayloadAction<string>) {
+			state.current = action.payload
 		}
 	}
 })

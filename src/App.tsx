@@ -61,6 +61,7 @@ const App = () => {
 			})
 		}
 		routeNameRef.current = currentRouteName
+		dispatch(navigationSlice.actions.updateCurrentRoute(currentRouteName))
 	}
 
 	const getInitialRoute = () => {
