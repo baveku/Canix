@@ -1,6 +1,8 @@
 module.exports = function (api) {
 	api.cache(true)
-	const presets = ['module:metro-react-native-babel-preset']
+	const presets = [
+		'module:metro-react-native-babel-preset',
+	]
 	let plugins = [
 		[
 			'module-resolver',
@@ -31,9 +33,8 @@ module.exports = function (api) {
 			},
 		],
 		['@babel/plugin-proposal-decorators', { legacy: true }],
-		'react-native-reanimated/plugin',
-		'@babel/plugin-proposal-class-properties',
-		'babel-plugin-codegen'
+		['@babel/plugin-proposal-class-properties', { loose: true }],
+		'react-native-reanimated/plugin'
 	]
 
 	if (process.env.ENV === 'production') {
