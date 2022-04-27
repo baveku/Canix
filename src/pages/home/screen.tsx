@@ -1,18 +1,20 @@
-import { postsState, PostAction } from 'src/core/slices'
 import { Post } from '@models'
 import FeedCell from '../explore/components/post'
 import { useNavigation } from '@react-navigation/core'
-import { Avatar, Box, Flex, Text, VStack, HStack, SectionList, FlatList } from 'native-base'
+import { Avatar, Box, Flex, Text, VStack, HStack, SectionList, FlatList, Center, Button } from 'native-base'
 import React, { useEffect, useState } from 'react'
-import { Button, LayoutAnimation, ListRenderItem, View } from 'react-native'
-import { RecoilState, useRecoilState } from 'recoil'
-import { useTranslation } from 'react-i18next'
-import PlayerButton from '@pages/home/components/button'
-import { SafeAreaView } from 'react-native-safe-area-context'
+import crashlytics from '@react-native-firebase/crashlytics'
 
 function HomePage() {
+
+	const onPress = () => {
+		crashlytics().crash()
+	}
+
 	return (
-		<View></View>
+		<Center flex={1}>
+			<Button onPress={onPress}><Text>Crash NOW</Text></Button>
+		</Center>
 	)
 }
 

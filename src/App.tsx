@@ -32,6 +32,7 @@ import { useAppDispatch, useAppSelector } from '@hooks'
 import { Provider } from 'react-redux'
 import { store } from '@redux.store'
 import { navigationSlice } from '@slices'
+import { SafeAreaProvider } from 'react-native-safe-area-context'
 
 const MainStack = createNativeStackNavigator<ReactNavigation.RootParamList>()
 
@@ -85,23 +86,25 @@ const App = () => {
 
 	return (
 		<NativeBaseProvider theme={mainTheme}>
-			<NavigationContainer
-				ref={navigationRef}
-				onReady={onReady}
-				onStateChange={onStateChange}
-			>
-				<StatusBar barStyle='dark-content' />
-				<MainStack.Navigator
-					screenOptions={{ headerShown: false }}
-					initialRouteName={getInitialRoute()}>
-					<MainStack.Screen name='Onboarding' component={Onboarding} />
-					<MainStack.Screen name='SelectLanguage' component={SelectLanguagePage} />
-					<MainStack.Screen name="Tab" component={TabScreen} />
-					<MainStack.Group screenOptions={{ presentation: 'fullScreenModal' }}>
-						<MainStack.Screen name="Auth" component={AuthStack} />
-					</MainStack.Group>
-				</MainStack.Navigator>
-			</NavigationContainer>
+			<SafeAreaProvider>
+				<NavigationContainer
+					ref={navigationRef}
+					onReady={onReady}
+					onStateChange={onStateChange}
+				>
+					<StatusBar barStyle='dark-content' />
+					<MainStack.Navigator
+						screenOptions={{ headerShown: false }}
+						initialRouteName={getInitialRoute()}>
+						<MainStack.Screen name='Onboarding' component={Onboarding} />
+						<MainStack.Screen name='SelectLanguage' component={SelectLanguagePage} />
+						<MainStack.Screen name="Tab" component={TabScreen} />
+						<MainStack.Group screenOptions={{ presentation: 'fullScreenModal' }}>
+							<MainStack.Screen name="Auth" component={AuthStack} />
+						</MainStack.Group>
+					</MainStack.Navigator>
+				</NavigationContainer>
+			</SafeAreaProvider>
 		</NativeBaseProvider>
 	)
 }
@@ -115,4 +118,5 @@ function MainApp() {
 		</Provider >
 	)
 }
+
 export default MainApp

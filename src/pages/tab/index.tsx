@@ -1,13 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { TabParamList } from '@router'
 import { HomeTab } from '@pages/home'
 import { ProfileTab } from '@pages/profile'
 import { ExploreTab } from '@pages/explore'
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import { BottomTabBarProps, createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { MessageTab } from '@pages/message'
-import { useTheme } from 'native-base'
+import { Box, HStack, useTheme, VStack } from 'native-base'
 import Images from '@assets/images'
 import { useTranslation } from 'react-i18next'
+import { Pressable, Text } from 'react-native'
+import { SafeAreaView } from 'react-native-safe-area-context'
+import MainTabbar from '@pages/tab/tabbar'
 
 const Tab = createBottomTabNavigator<TabParamList>()
 
@@ -17,12 +20,11 @@ function TabScreen() {
 
 	return (
 		<Tab.Navigator
+			tabBar={props => <MainTabbar {...props} />}
 			screenOptions={
 				{
 					headerShown: false,
-					tabBarActiveTintColor: theme.colors.primary[900],
-					tabBarInactiveTintColor: theme.colors.gray[400],
-					lazy: false
+					lazy: false,
 				}
 			}>
 			<Tab.Screen
@@ -32,10 +34,8 @@ function TabScreen() {
 					{
 						title: t('common:home'),
 						tabBarIcon: props =>
-							<Images.Home
-								fill={props.focused ? theme.colors.primary[900] : 'none'}
-								stroke={theme.colors.gray[400]}
-								strokeWidth={props.focused ? "0" : "2"}
+							<Images.TabHome
+								stroke={props.color}
 							/>
 					}
 				}
@@ -47,10 +47,8 @@ function TabScreen() {
 					{
 						title: t('common:explore'),
 						tabBarIcon: props =>
-							<Images.Explore
-								fill={props.focused ? theme.colors.primary[900] : 'none'}
-								stroke={theme.colors.gray[400]}
-								strokeWidth={props.focused ? "0" : "2"}
+							<Images.TabAnalytic
+								stroke={props.color}
 							/>
 					}
 				}
@@ -62,10 +60,8 @@ function TabScreen() {
 					{
 						title: t('common:message'),
 						tabBarIcon: props =>
-							<Images.Message
-								fill={props.focused ? theme.colors.primary[900] : 'none'}
-								stroke={theme.colors.gray[400]}
-								strokeWidth={props.focused ? "0" : "1.5"}
+							<Images.TabHistory
+								stroke={props.color}
 							/>
 					}
 				}
@@ -77,10 +73,8 @@ function TabScreen() {
 					{
 						title: t('common:profile'),
 						tabBarIcon: props =>
-							<Images.Profile
-								fill={props.focused ? theme.colors.primary[900] : 'none'}
-								stroke={theme.colors.gray[400]}
-								strokeWidth={props.focused ? "0" : "2"}
+							<Images.TabProfile
+								stroke={props.color}
 							/>
 					}
 				}
@@ -88,4 +82,5 @@ function TabScreen() {
 		</Tab.Navigator>
 	)
 }
+
 export default TabScreen

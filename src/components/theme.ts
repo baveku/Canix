@@ -14,6 +14,13 @@ export const mainTheme = extendTheme({
 			200: '#E1E1E1',
 			600: '#8A8A8A',
 			900: '#4C4C4C',
+		},
+		black: {
+			400: '#C4C4C4',
+			900: '#111847'
+		},
+		radian: {
+			900: '#FF488A'
 		}
 	},
 	config: {
