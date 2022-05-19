@@ -14,7 +14,7 @@
 		".eslintignore": true,
 		".eslintrc.json": true,
 		"android": true,
-		"ios": true,
+		// "ios": true,
 		"metro.config.js": true,
 		"jest.config.js": true
 	},

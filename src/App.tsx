@@ -89,14 +89,6 @@ const App = () => {
 						initialRouteName={getInitialRoute()}
 					>
 						<MainStack.Screen
-							name="Onboarding"
-							component={Onboarding}
-						/>
-						<MainStack.Screen
-							name="SelectLanguage"
-							component={SelectLanguagePage}
-						/>
-						<MainStack.Screen
 							name="Tab"
 							component={TabScreen}
 						/>

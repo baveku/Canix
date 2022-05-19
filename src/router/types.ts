@@ -17,12 +17,8 @@ export type ProfileParamList = {
 }
 
 // ------------------ Search -----------------------
-export type MessageParamList = {
-	MessagePage: undefined
-}
-
-export type ExplorerParamList = {
-	ExplorePage: undefined
+export type TasksParamList = {
+	TaskList: undefined
 }
 
 // ------------------ Auth -----------------------
@@ -36,8 +32,7 @@ export type AuthParamList = {
 export type TabParamList = {
 	HomeTab: NavigatorScreenParams<HomeParamList>
 	ProfileTab: NavigatorScreenParams<ProfileParamList>
-	MessageTab: NavigatorScreenParams<MessageParamList>
-	ExploreTab: NavigatorScreenParams<ExplorerParamList>
+	Tasks: NavigatorScreenParams<TasksParamList>
 }
 
 export type OnboardingParamList = {}
@@ -46,14 +41,12 @@ export type SelectLanguageParamList = {}
 export type RootStackParamList = {
 	Tab: NavigatorScreenParams<TabParamList>
 	Auth: NavigatorScreenParams<AuthParamList>
-	Onboarding: NavigatorScreenParams<OnboardingParamList>
-	SelectLanguage: NavigatorScreenParams<SelectLanguageParamList>
 }
 
 // This registers which makes navigation fully type-safe.
 // https://reactnavigation.org/docs/typescript#specifying-default-types-for-usenavigation-link-ref-etc
 declare global {
 	namespace ReactNavigation {
-		interface RootParamList extends RootStackParamList { }
+		interface RootParamList extends RootStackParamList {}
 	}
 }

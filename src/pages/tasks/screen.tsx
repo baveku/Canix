@@ -5,13 +5,13 @@ import { Button, LayoutAnimation, View } from 'react-native'
 import PostCell from './components/post'
 import { useAppSelector } from '@hooks'
 
-function ExplorePage() {
+function TasksPage() {
 	const posts = useAppSelector(state => state.posts.all)
 	const navigation = useNavigation()
 
 	const onPress = () => {
 		navigation.navigate('Tab', {
-			screen: 'MessageTab',
+			screen: 'Tasks',
 		})
 	}
 
@@ -19,8 +19,8 @@ function ExplorePage() {
 		navigation.navigate('Auth', {
 			screen: 'Login',
 			params: {
-				id: "12"
-			}
+				id: '12',
+			},
 		})
 	}
 
@@ -28,10 +28,7 @@ function ExplorePage() {
 		console.log(`DELETE ITEM ${postID}`)
 	}
 
-	return (
-		<View>
-		</View>
-	)
+	return <View></View>
 }
 
-export default ExplorePage
+export default TasksPage

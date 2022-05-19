@@ -1,10 +1,8 @@
 {
 	"common": {
-		"Hello": "Hello",
-		"explore": "Explore",
+		"tasks": "Tasks",
 		"home": "Home",
 		"profile": "Profile",
-		"message": "Message",
 		"language": "Language",
 		"login": "Login"
 	},

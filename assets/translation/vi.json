@@ -1,10 +1,8 @@
 {
 	"common": {
-		"Hello": "Xin chao",
-		"explore": "Mở rộng",
+		"tasks": "Nhiệm vụ",
 		"home": "Trang chủ",
 		"profile": "Cá nhân",
-		"message": "Tin nhắn",
 		"language": "Ngôn ngữ",
 		"login": "Đăng nhập"
 	},

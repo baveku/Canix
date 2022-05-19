@@ -1,5 +1,5 @@
 import { Match } from '@models'
-import FeedCell from '../explore/components/post'
+import FeedCell from '../tasks/components/post'
 import {
 	CompositeScreenProps,
 	useFocusEffect,
