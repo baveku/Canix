@@ -88,52 +88,52 @@ export const mainTheme = extendTheme({
 			900: '#FF488A',
 		},
 	},
-	fontConfig: {
-		Poppins: {
-			100: {
-				normal: 'Poppins-Thin',
-				italic: 'Poppins-ThinItalic',
-			},
-			200: {
-				normal: 'Poppins-Light',
-				italic: 'Poppins-LightItalic',
-			},
-			300: {
-				normal: 'Poppins-Light',
-				italic: 'Poppins-LightItalic',
-			},
-			400: {
-				normal: 'Poppins-Regular',
-				italic: 'Poppins-Italic',
-			},
-			500: {
-				normal: 'Poppins-Medium',
-				italic: 'Poppins-MediumItalic',
-			},
-			600: {
-				normal: 'Poppins-Medium',
-				italic: 'Poppins-MediumItalic',
-			},
-			// Add more vPopinss
-			700: {
-				normal: 'Poppins-Bold',
-				italic: 'Poppins-BoldItalic',
-			},
-			800: {
-				normal: 'Poppins-Bold',
-				italic: 'Poppins-BoldItalic',
-			},
-			900: {
-				normal: 'Poppins-SemiBold',
-				italic: 'v-SemiBoldItalic',
-			},
-		},
-	},
-	fonts: {
-		heading: 'Poppins',
-		body: 'Poppins',
-		mono: 'Poppins',
-	},
+	// fontConfig: {
+	// 	Poppins: {
+	// 		100: {
+	// 			normal: 'Poppins-Thin',
+	// 			italic: 'Poppins-ThinItalic',
+	// 		},
+	// 		200: {
+	// 			normal: 'Poppins-Light',
+	// 			italic: 'Poppins-LightItalic',
+	// 		},
+	// 		300: {
+	// 			normal: 'Poppins-Light',
+	// 			italic: 'Poppins-LightItalic',
+	// 		},
+	// 		400: {
+	// 			normal: 'Poppins-Regular',
+	// 			italic: 'Poppins-Italic',
+	// 		},
+	// 		500: {
+	// 			normal: 'Poppins-Medium',
+	// 			italic: 'Poppins-MediumItalic',
+	// 		},
+	// 		600: {
+	// 			normal: 'Poppins-Medium',
+	// 			italic: 'Poppins-MediumItalic',
+	// 		},
+	// 		// Add more vPopinss
+	// 		700: {
+	// 			normal: 'Poppins-Bold',
+	// 			italic: 'Poppins-BoldItalic',
+	// 		},
+	// 		800: {
+	// 			normal: 'Poppins-Bold',
+	// 			italic: 'Poppins-BoldItalic',
+	// 		},
+	// 		900: {
+	// 			normal: 'Poppins-SemiBold',
+	// 			italic: 'v-SemiBoldItalic',
+	// 		},
+	// 	},
+	// },
+	// fonts: {
+	// 	heading: 'Poppins',
+	// 	body: 'Poppins',
+	// 	mono: 'Poppins',
+	// },
 	config: {
 		// Changing initialColorMode to 'dark'
 		initialColorMode: 'dark',
