@@ -1,6 +1,6 @@
 import Images from '@assets/images'
 import { BottomTabBarProps } from '@react-navigation/bottom-tabs'
-import { VStack, HStack, useTheme, Box } from 'native-base'
+import { VStack, HStack, useTheme, Box, Text } from 'native-base'
 import React, { useEffect, useState } from 'react'
 import { Dimensions, LayoutAnimation, Pressable, StyleSheet, View } from 'react-native'
 import Animated, { Easing, useAnimatedStyle, useSharedValue, withSpring, withTiming } from 'react-native-reanimated'
@@ -67,22 +67,17 @@ export default function MainTabbar({ state, descriptors, navigation }: BottomTab
 				onLongPress={onLongPress}
 				style={{ flex: 1, alignItems: 'center' }}
 			>
-				{options.tabBarIcon({ focused: isFocused, color: isFocused ? theme.colors.black[900] : theme.colors.black[400], size: 20 })}
+				{options.tabBarIcon({ focused: isFocused, color: isFocused ? theme.colors.amber[500] : 'transparent', size: 20 })}
+				{isFocused ? <Text fontSize={'xs'} color={isFocused ? theme.colors.amber[400] : theme.colors.primary[400]}>{label}</Text> : <></>}
+
 			</Pressable>
 		)
-	}
-
-	const createButton = () => {
-		return <Pressable onPress={onCreate} style={{ flex: 1, alignItems: 'center' }}>
-			<Images.TabNew />
-		</Pressable>
 	}
 
 	const listTabbarItems = () => {
 		let items: JSX.Element[] = []
 		state.routes.forEach((route, index) => {
 			if (index === 2) {
-				items.push(createButton())
 				items.push(tabbarButton({ route, index }))
 			} else {
 				items.push(tabbarButton({ route, index }))
@@ -94,14 +89,14 @@ export default function MainTabbar({ state, descriptors, navigation }: BottomTab
 	const onCreate = () => { }
 
 	return (
-		<VStack>
-			<HStack alignItems={'center'} backgroundColor={'white'} paddingTop={'2'}>
+		<VStack backgroundColor={theme.colors.primary[900]}>
+			<HStack alignItems={'center'} paddingTop={'2'}>
 				{listTabbarItems()}
 			</HStack>
-			<HStack backgroundColor={'#fff'}>
+			{/* <HStack>
 				<Animated.View style={[styles.divider, { backgroundColor: theme.colors.radian[900] }, animatedStyles]} />
-			</HStack>
-			<SafeAreaView edges={['bottom']} style={{ backgroundColor: 'white' }} />
+			</HStack> */}
+			<SafeAreaView edges={['bottom']} />
 		</VStack>
 	)
 }

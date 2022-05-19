@@ -19,7 +19,7 @@ import { AuthStack } from '@pages/auth'
 import { useFlipper } from '@react-navigation/devtools'
 import { NativeBaseProvider } from 'native-base'
 import analytics from '@react-native-firebase/analytics'
-import { mainTheme } from '@components/theme'
+import { mainTheme } from './theme'
 import { StatusBar } from 'react-native'
 import { I18nextProvider, useTranslation } from 'react-i18next'
 import i18n from './tools/i18n'
@@ -33,6 +33,7 @@ import { Provider } from 'react-redux'
 import { store } from '@redux.store'
 import { navigationSlice } from '@slices'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
+import { LiveAnimationProvider } from '@components/live-animation'
 
 const MainStack = createNativeStackNavigator<ReactNavigation.RootParamList>()
 
@@ -41,13 +42,14 @@ const App = () => {
 	const navigationRef = useNavigationContainerRef()
 	const { t, i18n } = useTranslation()
 	const dispatch = useAppDispatch()
+	const [isDark, setDark] = useState(false)
 	const userWorkflow = useAppSelector(state => state.navigation.workflow)
 
 	useFlipper(navigationRef)
 	const onReady = () => {
 		routeNameRef.current = navigationRef.current.getCurrentRoute().name
 		if (userWorkflow === UserWorkflowState.LOGIN) {
-			navigationRef.navigate('Auth', { screen: 'Login' })
+			// navigationRef.navigate('Auth', { screen: 'Login' })
 		}
 	}
 
@@ -62,25 +64,12 @@ const App = () => {
 			})
 		}
 		routeNameRef.current = currentRouteName
+
 		dispatch(navigationSlice.actions.updateCurrentRoute(currentRouteName))
 	}
 
 	const getInitialRoute = () => {
-		let currentRouteName: keyof (RootStackParamList) = 'Onboarding'
-		switch (userWorkflow) {
-			case UserWorkflowState.SELECT_LANG:
-				currentRouteName = 'SelectLanguage'
-				break
-			case UserWorkflowState.HOME:
-				currentRouteName = 'Tab'
-				break
-			case UserWorkflowState.LOGIN:
-				currentRouteName = 'Tab'
-				break
-			default:
-				currentRouteName = 'Onboarding'
-				break
-		}
+		let currentRouteName: keyof RootStackParamList = 'Tab'
 		return currentRouteName
 	}
 
@@ -92,15 +81,32 @@ const App = () => {
 					onReady={onReady}
 					onStateChange={onStateChange}
 				>
-					<StatusBar barStyle='dark-content' />
+					<StatusBar
+						barStyle={isDark ? 'dark-content' : 'light-content'}
+					/>
 					<MainStack.Navigator
 						screenOptions={{ headerShown: false }}
-						initialRouteName={getInitialRoute()}>
-						<MainStack.Screen name='Onboarding' component={Onboarding} />
-						<MainStack.Screen name='SelectLanguage' component={SelectLanguagePage} />
-						<MainStack.Screen name="Tab" component={TabScreen} />
-						<MainStack.Group screenOptions={{ presentation: 'fullScreenModal' }}>
-							<MainStack.Screen name="Auth" component={AuthStack} />
+						initialRouteName={getInitialRoute()}
+					>
+						<MainStack.Screen
+							name="Onboarding"
+							component={Onboarding}
+						/>
+						<MainStack.Screen
+							name="SelectLanguage"
+							component={SelectLanguagePage}
+						/>
+						<MainStack.Screen
+							name="Tab"
+							component={TabScreen}
+						/>
+						<MainStack.Group
+							screenOptions={{ presentation: 'fullScreenModal' }}
+						>
+							<MainStack.Screen
+								name="Auth"
+								component={AuthStack}
+							/>
 						</MainStack.Group>
 					</MainStack.Navigator>
 				</NavigationContainer>
@@ -113,9 +119,11 @@ function MainApp() {
 	return (
 		<Provider store={store}>
 			<I18nextProvider i18n={i18n}>
-				<App />
+				<LiveAnimationProvider>
+					<App />
+				</LiveAnimationProvider>
 			</I18nextProvider>
-		</Provider >
+		</Provider>
 	)
 }
 

@@ -1,5 +1,1 @@
-export * from './post'
-export * from './branch'
-export * from './social.model'
-export * from './car'
-export * from './global.news'
+export * from './match'

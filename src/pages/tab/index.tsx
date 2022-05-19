@@ -34,8 +34,9 @@ function TabScreen() {
 					{
 						title: t('common:home'),
 						tabBarIcon: props =>
-							<Images.TabHome
-								stroke={props.color}
+							<Images.Home
+								fill={props.color}
+								stroke={props.focused ? 'transparent' : theme.colors.primary[400]}
 							/>
 					}
 				}
@@ -45,10 +46,11 @@ function TabScreen() {
 				component={ExploreTab}
 				options={
 					{
-						title: t('common:explore'),
+						title: t('common:news'),
 						tabBarIcon: props =>
-							<Images.TabAnalytic
-								stroke={props.color}
+							<Images.Explore
+								fill={props.color}
+								stroke={props.focused ? 'transparent' : theme.colors.primary[400]}
 							/>
 					}
 				}
@@ -58,10 +60,11 @@ function TabScreen() {
 				component={MessageTab}
 				options={
 					{
-						title: t('common:message'),
+						title: t('common:highlight'),
 						tabBarIcon: props =>
-							<Images.TabHistory
-								stroke={props.color}
+							<Images.Message
+								fill={props.color}
+								stroke={props.focused ? 'transparent' : theme.colors.primary[400]}
 							/>
 					}
 				}
@@ -73,8 +76,9 @@ function TabScreen() {
 					{
 						title: t('common:profile'),
 						tabBarIcon: props =>
-							<Images.TabProfile
-								stroke={props.color}
+							<Images.Profile
+								fill={props.color}
+								stroke={props.focused ? 'transparent' : theme.colors.primary[400]}
 							/>
 					}
 				}

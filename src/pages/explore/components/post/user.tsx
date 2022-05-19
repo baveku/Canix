@@ -2,7 +2,7 @@ import { Post } from '@models'
 import { Box, VStack, HStack, Avatar, Text, Image, Skeleton, Button, Heading, Icon } from 'native-base'
 import React, { useEffect, useState } from 'react'
 import { StyleSheet } from 'react-native'
-import { Ionicons } from '@components/fonts'
+import { Ionicons } from 'src/theme/fonts'
 import FastImage from 'react-native-fast-image'
 
 export default function UserInfoPost() {

@@ -14,7 +14,7 @@ export default function HomeTab() {
 				component={HomePage}
 				options={
 					{
-						headerShown: false
+						headerShown: true
 					}
 				}
 			/>

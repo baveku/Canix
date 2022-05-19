@@ -3,8 +3,8 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 
 platform :ios, '11.0'
 install! 'cocoapods', :deterministic_uuids => false
-
-target 'Canix' do
+$RNFirebaseAnalyticsWithoutAdIdSupport=true
+target 'App' do
   config = use_native_modules!
 
   # Flags change depending on the env values.
@@ -19,7 +19,7 @@ target 'Canix' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
-  target 'CanixTests' do
+  target 'AppTests' do
     inherit! :complete
     # Pods for testing
   end
@@ -28,7 +28,7 @@ target 'Canix' do
   #
   # Note that if you have use_frameworks! enabled, Flipper will not work and
   # you should disable the next line.
-  use_flipper!({'Flipper' => '0.141.0'})
+  use_flipper!({'Flipper' => '0.145.0'})
 
   post_install do |installer|
     react_native_post_install(installer)

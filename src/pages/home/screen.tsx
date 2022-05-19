@@ -1,20 +1,40 @@
-import { Post } from '@models'
+import { Match } from '@models'
 import FeedCell from '../explore/components/post'
-import { useNavigation } from '@react-navigation/core'
-import { Avatar, Box, Flex, Text, VStack, HStack, SectionList, FlatList, Center, Button } from 'native-base'
-import React, { useEffect, useState } from 'react'
-import crashlytics from '@react-native-firebase/crashlytics'
+import {
+	CompositeScreenProps,
+	useFocusEffect,
+	useNavigation,
+} from '@react-navigation/core'
+import {
+	Avatar,
+	Box,
+	Flex,
+	Text,
+	VStack,
+	HStack,
+	SectionList,
+	FlatList,
+	Center,
+	Button,
+	useTheme,
+} from 'native-base'
+import React, { useEffect, useLayoutEffect, useState } from 'react'
+import { NativeStackScreenProps } from '@react-navigation/native-stack'
+import { TabParamList, RootStackParamList } from '@router'
+import Images from '@assets/images'
+import { useLiveAnimation } from '@components/live-animation'
 
-function HomePage() {
+type HomeProps = CompositeScreenProps<
+	NativeStackScreenProps<TabParamList, 'HomeTab'>,
+	NativeStackScreenProps<RootStackParamList>
+>
 
-	const onPress = () => {
-		crashlytics().crash()
-	}
+function HomePage({ navigation, route }: HomeProps) {
+	const nav = useNavigation()
+	const theme = useTheme()
 
 	return (
-		<Center flex={1}>
-			<Button onPress={onPress}><Text>Crash NOW</Text></Button>
-		</Center>
+		<VStack flex={1} backgroundColor={theme.colors.primary[900]}></VStack>
 	)
 }
 

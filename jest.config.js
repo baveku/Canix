@@ -1,4 +1,4 @@
-const { defaults } = require('jest-config');
+const { defaults } = require('jest-config')
 
 module.exports = {
 	preset: 'react-native',
@@ -9,16 +9,17 @@ module.exports = {
 	globals: { __DEV__: true },
 	moduleFileExtensions: [
 		...defaults.moduleFileExtensions,
-		"ts",
-		"tsx",
-		"js",
-		"jsx",
-		"json",
-		"node"
+		'ts',
+		'tsx',
+		'js',
+		'jsx',
+		'json',
+		'node',
 	],
 	moduleNameMapper: {
-		"\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "jest-transform-stub"
+		'\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
+			'jest-transform-stub',
 	},
-	setupFilesAfterEnv: ['./jest.setup.js'],
-	verbose: true
+	setupFiles: ['<rootDir>/bin/jest.setup.js'],
+	verbose: true,
 }

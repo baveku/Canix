@@ -7,16 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* CanixTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* CanixTests.m */; };
-		0C80B921A6F3F58F76C31292 /* libPods-Canix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-Canix.a */; };
-		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
-		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
-		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		7699B88040F8A987B510C191 /* libPods-Canix-CanixTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-Canix-CanixTests.a */; };
-		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		00E356F31AD99517003FC87E /* AppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* AppTests.m */; };
+		05F19D17D2D04A42A8B45CC2 /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21D204FB3F574364B37554DE /* Poppins-Italic.ttf */; };
+		12646085CDF24948A8A9ECCF /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5FC1169F969D4710A89CB3AF /* Poppins-Bold.ttf */; };
+		13251FA4A3D142D496C9A5E1 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08262BB28C0E47BE84AFF3CD /* Poppins-SemiBold.ttf */; };
+		3C6E4B2EE34746099B1CA5DB /* Poppins-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48D95AE00C5745F5851560F6 /* Poppins-ExtraLightItalic.ttf */; };
+		4866D8653D48464FA30734A6 /* Poppins-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9126302B4FF24B6A82F23114 /* Poppins-LightItalic.ttf */; };
+		4B4F0A4E4FAB4CC0B3AD736A /* Poppins-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DC8702AC7A3449879C1550D2 /* Poppins-BoldItalic.ttf */; };
+		5E327598555648C88AF1E9A6 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5C74F417FBD44E1486BB63AA /* Poppins-Medium.ttf */; };
+		6263CC3B4B754CE4B1A7BD22 /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37C37CAA8A4E4F978B0E30C3 /* Poppins-ExtraBold.ttf */; };
+		63F97A45AE244ED292FCDCEF /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 315E7BEAB5E24F449CB14D9F /* Poppins-Black.ttf */; };
+		675A869BC36B40B0857227A3 /* Poppins-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F367E99E43EB45B1AD580962 /* Poppins-ExtraBoldItalic.ttf */; };
+		690C6BFA707E4C6A92C72B7E /* Poppins-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B20767CDEB64D439B2F7589 /* Poppins-ThinItalic.ttf */; };
+		7B00C4DD58D84441B8A96A1E /* Poppins-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3828A94948E4619BDEB0B30 /* Poppins-BlackItalic.ttf */; };
+		8AC79FA33B4D4050AF72CCC6 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E0AA05E98134BADA9D98D14 /* Poppins-Regular.ttf */; };
+		964CD18032D34CC5A54B9BA8 /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9116DF05B3BA4F6B92BAE3B7 /* Poppins-Thin.ttf */; };
+		9B440D92C11E4924BD0CEA74 /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 68554D3F09064E8C98D39AA2 /* Poppins-MediumItalic.ttf */; };
+		D5713D03BE49756B40EB37A8 /* libPods-App-AppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 182989266C41D248AAB8070D /* libPods-App-AppTests.a */; };
+		D78B9915134A4D45A98D3800 /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D9D41E334404A3DACB3FE76 /* Poppins-ExtraLight.ttf */; };
+		F3E37CE08E4B420A8414569F /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF795708F7AC437DADE46830 /* Poppins-Light.ttf */; };
+		FB11CCF32829513400E7AE04 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB11CCED2829513400E7AE04 /* Images.xcassets */; };
+		FB11CCF52829513400E7AE04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB11CCEF2829513400E7AE04 /* LaunchScreen.storyboard */; };
+		FB11CCF62829513400E7AE04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB11CCF02829513400E7AE04 /* main.m */; };
+		FB11CCF72829513400E7AE04 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = FB11CCF22829513400E7AE04 /* AppDelegate.mm */; };
+		FB260FEBE5EF4553B5BBE006 /* Poppins-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B2A2EAF4F661463FB4B239C0 /* Poppins-SemiBoldItalic.ttf */; };
 		FBDA5BA827F8287100451BF5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FBDA5BA527F8287100451BF5 /* GoogleService-Info.plist */; };
 		FBDA5BA927F8287100451BF5 /* GoogleService-Info-Dev.plist in Resources */ = {isa = PBXBuildFile; fileRef = FBDA5BA627F8287100451BF5 /* GoogleService-Info-Dev.plist */; };
 		FBDA5BAA27F8287100451BF5 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = FBDA5BA727F8287100451BF5 /* Config.xcconfig */; };
+		FE7C15599D9D792E0225AFC3 /* libPods-App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FCDA4CFA863CD070F1B3FC46 /* libPods-App.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,26 +48,64 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00E356EE1AD99517003FC87E /* CanixTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CanixTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00074AF6D1C349C4A77278D4 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
+		00E356EE1AD99517003FC87E /* AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* CanixTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CanixTests.m; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* Canix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Canix.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Canix/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = Canix/AppDelegate.mm; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Canix/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Canix/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Canix/main.m; sourceTree = "<group>"; };
-		19F6CBCC0A4E27FBF8BF4A61 /* libPods-Canix-CanixTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Canix-CanixTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356F21AD99517003FC87E /* AppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppTests.m; sourceTree = "<group>"; };
+		08262BB28C0E47BE84AFF3CD /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-SemiBold.ttf"; path = "../assets/fonts/Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		0EBB90D007824B03AE47F603 /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1757B1FA32AC49D68AF0D99D /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
+		182989266C41D248AAB8070D /* libPods-App-AppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-App-AppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		21D204FB3F574364B37554DE /* Poppins-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Italic.ttf"; path = "../assets/fonts/Poppins-Italic.ttf"; sourceTree = "<group>"; };
+		2D6CA644A04746B386197229 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
+		315E7BEAB5E24F449CB14D9F /* Poppins-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Black.ttf"; path = "../assets/fonts/Poppins-Black.ttf"; sourceTree = "<group>"; };
+		37C37CAA8A4E4F978B0E30C3 /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-ExtraBold.ttf"; path = "../assets/fonts/Poppins-ExtraBold.ttf"; sourceTree = "<group>"; };
+		3ABE40B480F74E8997017896 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-Canix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Canix.debug.xcconfig"; path = "Target Support Files/Pods-Canix/Pods-Canix.debug.xcconfig"; sourceTree = "<group>"; };
+		47F392CA2AD819A79562F889 /* Pods-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.release.xcconfig"; path = "Target Support Files/Pods-App/Pods-App.release.xcconfig"; sourceTree = "<group>"; };
+		48D95AE00C5745F5851560F6 /* Poppins-ExtraLightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-ExtraLightItalic.ttf"; path = "../assets/fonts/Poppins-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		4F0630A29D70447C9A780B74 /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
+		53A0D990924D408886DD4AC7 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-Canix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Canix.release.xcconfig"; path = "Target Support Files/Pods-Canix/Pods-Canix.release.xcconfig"; sourceTree = "<group>"; };
+		5B20767CDEB64D439B2F7589 /* Poppins-ThinItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-ThinItalic.ttf"; path = "../assets/fonts/Poppins-ThinItalic.ttf"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-Canix-CanixTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Canix-CanixTests.debug.xcconfig"; path = "Target Support Files/Pods-Canix-CanixTests/Pods-Canix-CanixTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5DCACB8F33CDC322A6C60F78 /* libPods-Canix.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Canix.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Canix/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5C74F417FBD44E1486BB63AA /* Poppins-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Medium.ttf"; path = "../assets/fonts/Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		5E0AA05E98134BADA9D98D14 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Regular.ttf"; path = "../assets/fonts/Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		5FC1169F969D4710A89CB3AF /* Poppins-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Bold.ttf"; path = "../assets/fonts/Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		63EF6CCB58A04E17B03ED2D6 /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
+		66C481F2D2894E62BFAB482C /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
+		68554D3F09064E8C98D39AA2 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-MediumItalic.ttf"; path = "../assets/fonts/Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
+		6D9D41E334404A3DACB3FE76 /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-ExtraLight.ttf"; path = "../assets/fonts/Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-Canix-CanixTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Canix-CanixTests.release.xcconfig"; path = "Target Support Files/Pods-Canix-CanixTests/Pods-Canix-CanixTests.release.xcconfig"; sourceTree = "<group>"; };
+		8BC0B167D8CE70B42A0EE74E /* Pods-App-AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-AppTests.debug.xcconfig"; path = "Target Support Files/Pods-App-AppTests/Pods-App-AppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8CDF23963990451A89C4A830 /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
+		9116DF05B3BA4F6B92BAE3B7 /* Poppins-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Thin.ttf"; path = "../assets/fonts/Poppins-Thin.ttf"; sourceTree = "<group>"; };
+		9126302B4FF24B6A82F23114 /* Poppins-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-LightItalic.ttf"; path = "../assets/fonts/Poppins-LightItalic.ttf"; sourceTree = "<group>"; };
+		9E9A9B1848EC4519DDAD2897 /* Pods-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.debug.xcconfig"; path = "Target Support Files/Pods-App/Pods-App.debug.xcconfig"; sourceTree = "<group>"; };
+		9F281D7256197261C90E6460 /* Pods-App-AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-AppTests.release.xcconfig"; path = "Target Support Files/Pods-App-AppTests/Pods-App-AppTests.release.xcconfig"; sourceTree = "<group>"; };
+		AB46AE503E2247CC84D0328D /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
+		AF795708F7AC437DADE46830 /* Poppins-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Light.ttf"; path = "../assets/fonts/Poppins-Light.ttf"; sourceTree = "<group>"; };
+		B0B18DCDD5E440FA9ADC89A1 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
+		B2A2EAF4F661463FB4B239C0 /* Poppins-SemiBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-SemiBoldItalic.ttf"; path = "../assets/fonts/Poppins-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		B64F43CC38684A1F94680CF6 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
+		C18DE84AD147421389F1FE4E /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
+		DC8702AC7A3449879C1550D2 /* Poppins-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-BoldItalic.ttf"; path = "../assets/fonts/Poppins-BoldItalic.ttf"; sourceTree = "<group>"; };
+		DD6AB5CE99C744469D731928 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
+		DFE5CDA8027D4D36B0D49A27 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Solid.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F367E99E43EB45B1AD580962 /* Poppins-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-ExtraBoldItalic.ttf"; path = "../assets/fonts/Poppins-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		F3828A94948E4619BDEB0B30 /* Poppins-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-BlackItalic.ttf"; path = "../assets/fonts/Poppins-BlackItalic.ttf"; sourceTree = "<group>"; };
+		FB11CCED2829513400E7AE04 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = App/Images.xcassets; sourceTree = "<group>"; };
+		FB11CCEE2829513400E7AE04 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = App/Info.plist; sourceTree = "<group>"; };
+		FB11CCEF2829513400E7AE04 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = App/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FB11CCF02829513400E7AE04 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = App/main.m; sourceTree = "<group>"; };
+		FB11CCF12829513400E7AE04 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = App/AppDelegate.h; sourceTree = "<group>"; };
+		FB11CCF22829513400E7AE04 /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = App/AppDelegate.mm; sourceTree = "<group>"; };
 		FBDA5BA527F8287100451BF5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FBDA5BA627F8287100451BF5 /* GoogleService-Info-Dev.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Dev.plist"; sourceTree = "<group>"; };
 		FBDA5BA727F8287100451BF5 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		FCDA4CFA863CD070F1B3FC46 /* libPods-App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7699B88040F8A987B510C191 /* libPods-Canix-CanixTests.a in Frameworks */,
+				D5713D03BE49756B40EB37A8 /* libPods-App-AppTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,20 +121,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C80B921A6F3F58F76C31292 /* libPods-Canix.a in Frameworks */,
+				FE7C15599D9D792E0225AFC3 /* libPods-App.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* CanixTests */ = {
+		00E356EF1AD99517003FC87E /* AppTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* CanixTests.m */,
+				00E356F21AD99517003FC87E /* AppTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = CanixTests;
+			path = AppTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -89,30 +145,71 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* Canix */ = {
+		13B07FAE1A68108700A75B9A /* App */ = {
 			isa = PBXGroup;
 			children = (
 				FBDA5BA727F8287100451BF5 /* Config.xcconfig */,
 				FBDA5BA627F8287100451BF5 /* GoogleService-Info-Dev.plist */,
 				FBDA5BA527F8287100451BF5 /* GoogleService-Info.plist */,
-				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
-				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
-				13B07FB51A68108700A75B9A /* Images.xcassets */,
-				13B07FB61A68108700A75B9A /* Info.plist */,
-				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
-				13B07FB71A68108700A75B9A /* main.m */,
+				FB11CCF12829513400E7AE04 /* AppDelegate.h */,
+				FB11CCF22829513400E7AE04 /* AppDelegate.mm */,
+				FB11CCED2829513400E7AE04 /* Images.xcassets */,
+				FB11CCEE2829513400E7AE04 /* Info.plist */,
+				FB11CCEF2829513400E7AE04 /* LaunchScreen.storyboard */,
+				FB11CCF02829513400E7AE04 /* main.m */,
 			);
-			name = Canix;
+			name = App;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				5DCACB8F33CDC322A6C60F78 /* libPods-Canix.a */,
-				19F6CBCC0A4E27FBF8BF4A61 /* libPods-Canix-CanixTests.a */,
+				FCDA4CFA863CD070F1B3FC46 /* libPods-App.a */,
+				182989266C41D248AAB8070D /* libPods-App-AppTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7AFE9AB615F646D5A18959E0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				315E7BEAB5E24F449CB14D9F /* Poppins-Black.ttf */,
+				F3828A94948E4619BDEB0B30 /* Poppins-BlackItalic.ttf */,
+				5FC1169F969D4710A89CB3AF /* Poppins-Bold.ttf */,
+				DC8702AC7A3449879C1550D2 /* Poppins-BoldItalic.ttf */,
+				37C37CAA8A4E4F978B0E30C3 /* Poppins-ExtraBold.ttf */,
+				F367E99E43EB45B1AD580962 /* Poppins-ExtraBoldItalic.ttf */,
+				6D9D41E334404A3DACB3FE76 /* Poppins-ExtraLight.ttf */,
+				48D95AE00C5745F5851560F6 /* Poppins-ExtraLightItalic.ttf */,
+				21D204FB3F574364B37554DE /* Poppins-Italic.ttf */,
+				AF795708F7AC437DADE46830 /* Poppins-Light.ttf */,
+				9126302B4FF24B6A82F23114 /* Poppins-LightItalic.ttf */,
+				5C74F417FBD44E1486BB63AA /* Poppins-Medium.ttf */,
+				68554D3F09064E8C98D39AA2 /* Poppins-MediumItalic.ttf */,
+				5E0AA05E98134BADA9D98D14 /* Poppins-Regular.ttf */,
+				08262BB28C0E47BE84AFF3CD /* Poppins-SemiBold.ttf */,
+				B2A2EAF4F661463FB4B239C0 /* Poppins-SemiBoldItalic.ttf */,
+				9116DF05B3BA4F6B92BAE3B7 /* Poppins-Thin.ttf */,
+				5B20767CDEB64D439B2F7589 /* Poppins-ThinItalic.ttf */,
+				8CDF23963990451A89C4A830 /* AntDesign.ttf */,
+				0EBB90D007824B03AE47F603 /* Entypo.ttf */,
+				00074AF6D1C349C4A77278D4 /* EvilIcons.ttf */,
+				4F0630A29D70447C9A780B74 /* Feather.ttf */,
+				3ABE40B480F74E8997017896 /* FontAwesome.ttf */,
+				53A0D990924D408886DD4AC7 /* FontAwesome5_Brands.ttf */,
+				C18DE84AD147421389F1FE4E /* FontAwesome5_Regular.ttf */,
+				DFE5CDA8027D4D36B0D49A27 /* FontAwesome5_Solid.ttf */,
+				63EF6CCB58A04E17B03ED2D6 /* Fontisto.ttf */,
+				B0B18DCDD5E440FA9ADC89A1 /* Foundation.ttf */,
+				2D6CA644A04746B386197229 /* Ionicons.ttf */,
+				1757B1FA32AC49D68AF0D99D /* MaterialCommunityIcons.ttf */,
+				AB46AE503E2247CC84D0328D /* MaterialIcons.ttf */,
+				66C481F2D2894E62BFAB482C /* Octicons.ttf */,
+				B64F43CC38684A1F94680CF6 /* SimpleLineIcons.ttf */,
+				DD6AB5CE99C744469D731928 /* Zocial.ttf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -125,12 +222,13 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* Canix */,
+				13B07FAE1A68108700A75B9A /* App */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* CanixTests */,
+				00E356EF1AD99517003FC87E /* AppTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				7AFE9AB615F646D5A18959E0 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -140,8 +238,8 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* Canix.app */,
-				00E356EE1AD99517003FC87E /* CanixTests.xctest */,
+				13B07F961A680F5B00A75B9A /* App.app */,
+				00E356EE1AD99517003FC87E /* AppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -153,6 +251,10 @@
 				5709B34CF0A7D63546082F79 /* Pods-Canix.release.xcconfig */,
 				5B7EB9410499542E8C5724F5 /* Pods-Canix-CanixTests.debug.xcconfig */,
 				89C6BE57DB24E9ADA2F236DE /* Pods-Canix-CanixTests.release.xcconfig */,
+				9E9A9B1848EC4519DDAD2897 /* Pods-App.debug.xcconfig */,
+				47F392CA2AD819A79562F889 /* Pods-App.release.xcconfig */,
+				8BC0B167D8CE70B42A0EE74E /* Pods-App-AppTests.debug.xcconfig */,
+				9F281D7256197261C90E6460 /* Pods-App-AppTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -160,9 +262,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* CanixTests */ = {
+		00E356ED1AD99517003FC87E /* AppTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "CanixTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "AppTests" */;
 			buildPhases = (
 				A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -176,14 +278,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = CanixTests;
+			name = AppTests;
 			productName = CanixTests;
-			productReference = 00E356EE1AD99517003FC87E /* CanixTests.xctest */;
+			productReference = 00E356EE1AD99517003FC87E /* AppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* Canix */ = {
+		13B07F861A680F5B00A75B9A /* App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Canix" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "App" */;
 			buildPhases = (
 				C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -200,9 +302,9 @@
 			);
 			dependencies = (
 			);
-			name = Canix;
+			name = App;
 			productName = Canix;
-			productReference = 13B07F961A680F5B00A75B9A /* Canix.app */;
+			productReference = 13B07F961A680F5B00A75B9A /* App.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -222,7 +324,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Canix" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "App" */;
 			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -235,8 +337,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* Canix */,
-				00E356ED1AD99517003FC87E /* CanixTests */,
+				13B07F861A680F5B00A75B9A /* App */,
+				00E356ED1AD99517003FC87E /* AppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -253,11 +355,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				FB11CCF52829513400E7AE04 /* LaunchScreen.storyboard in Resources */,
 				FBDA5BAA27F8287100451BF5 /* Config.xcconfig in Resources */,
 				FBDA5BA927F8287100451BF5 /* GoogleService-Info-Dev.plist in Resources */,
-				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				FB11CCF32829513400E7AE04 /* Images.xcassets in Resources */,
 				FBDA5BA827F8287100451BF5 /* GoogleService-Info.plist in Resources */,
+				63F97A45AE244ED292FCDCEF /* Poppins-Black.ttf in Resources */,
+				7B00C4DD58D84441B8A96A1E /* Poppins-BlackItalic.ttf in Resources */,
+				12646085CDF24948A8A9ECCF /* Poppins-Bold.ttf in Resources */,
+				4B4F0A4E4FAB4CC0B3AD736A /* Poppins-BoldItalic.ttf in Resources */,
+				6263CC3B4B754CE4B1A7BD22 /* Poppins-ExtraBold.ttf in Resources */,
+				675A869BC36B40B0857227A3 /* Poppins-ExtraBoldItalic.ttf in Resources */,
+				D78B9915134A4D45A98D3800 /* Poppins-ExtraLight.ttf in Resources */,
+				3C6E4B2EE34746099B1CA5DB /* Poppins-ExtraLightItalic.ttf in Resources */,
+				05F19D17D2D04A42A8B45CC2 /* Poppins-Italic.ttf in Resources */,
+				F3E37CE08E4B420A8414569F /* Poppins-Light.ttf in Resources */,
+				4866D8653D48464FA30734A6 /* Poppins-LightItalic.ttf in Resources */,
+				5E327598555648C88AF1E9A6 /* Poppins-Medium.ttf in Resources */,
+				9B440D92C11E4924BD0CEA74 /* Poppins-MediumItalic.ttf in Resources */,
+				8AC79FA33B4D4050AF72CCC6 /* Poppins-Regular.ttf in Resources */,
+				13251FA4A3D142D496C9A5E1 /* Poppins-SemiBold.ttf in Resources */,
+				FB260FEBE5EF4553B5BBE006 /* Poppins-SemiBoldItalic.ttf in Resources */,
+				964CD18032D34CC5A54B9BA8 /* Poppins-Thin.ttf in Resources */,
+				690C6BFA707E4C6A92C72B7E /* Poppins-ThinItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,15 +404,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Canix/Pods-Canix-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-App/Pods-App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Canix/Pods-Canix-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-App/Pods-App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Canix/Pods-Canix-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-App/Pods-App-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		502FAC8238FB6BC3121C87AE /* [CP-User] [RNFB] Core Configuration */ = {
@@ -337,7 +457,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Canix-CanixTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-App-AppTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -359,7 +479,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Canix-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-App-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -372,15 +492,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Canix-CanixTests/Pods-Canix-CanixTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-App-AppTests/Pods-App-AppTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Canix-CanixTests/Pods-Canix-CanixTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-App-AppTests/Pods-App-AppTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Canix-CanixTests/Pods-Canix-CanixTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-App-AppTests/Pods-App-AppTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E235C05ADACE081382539298 /* [CP] Copy Pods Resources */ = {
@@ -389,15 +509,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Canix/Pods-Canix-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-App/Pods-App-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Canix/Pods-Canix-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-App/Pods-App-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Canix/Pods-Canix-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-App/Pods-App-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */ = {
@@ -406,15 +526,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Canix-CanixTests/Pods-Canix-CanixTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-App-AppTests/Pods-App-AppTests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Canix-CanixTests/Pods-Canix-CanixTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-App-AppTests/Pods-App-AppTests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Canix-CanixTests/Pods-Canix-CanixTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-App-AppTests/Pods-App-AppTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -443,7 +563,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* CanixTests.m in Sources */,
+				00E356F31AD99517003FC87E /* AppTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,8 +571,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
-				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				FB11CCF62829513400E7AE04 /* main.m in Sources */,
+				FB11CCF72829513400E7AE04 /* AppDelegate.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,7 +581,7 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* Canix */;
+			target = 13B07F861A680F5B00A75B9A /* App */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -469,7 +589,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-Canix-CanixTests.debug.xcconfig */;
+			baseConfigurationReference = 8BC0B167D8CE70B42A0EE74E /* Pods-App-AppTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -490,13 +610,13 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Canix.app/Canix";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/App.app/App";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-Canix-CanixTests.release.xcconfig */;
+			baseConfigurationReference = 9F281D7256197261C90E6460 /* Pods-App-AppTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -514,19 +634,19 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Canix.app/Canix";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/App.app/App";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-Canix.debug.xcconfig */;
+			baseConfigurationReference = 9E9A9B1848EC4519DDAD2897 /* Pods-App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = Canix/Info.plist;
+				INFOPLIST_FILE = App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -537,7 +657,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "$(APP_BUNDLE_ID)";
-				PRODUCT_NAME = Canix;
+				PRODUCT_NAME = App;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -546,12 +666,12 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-Canix.release.xcconfig */;
+			baseConfigurationReference = 47F392CA2AD819A79562F889 /* Pods-App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = Canix/Info.plist;
+				INFOPLIST_FILE = App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -562,7 +682,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "$(APP_BUNDLE_ID)";
-				PRODUCT_NAME = Canix;
+				PRODUCT_NAME = App;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -708,7 +828,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "CanixTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "AppTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -717,7 +837,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Canix" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -726,7 +846,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Canix" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

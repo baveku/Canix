@@ -3,7 +3,7 @@ import { Box, VStack, HStack, Avatar, Image, Skeleton, Button, Heading, Icon, Te
 import React, { useEffect, useState } from 'react'
 import { StyleSheet } from 'react-native'
 import FastImage from 'react-native-fast-image'
-import { AntDesign, Octicons } from '@components/fonts'
+import { AntDesign, Octicons } from 'src/theme/fonts'
 
 export default function PostShortDetail() {
 	return (

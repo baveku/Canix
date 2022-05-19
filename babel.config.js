@@ -1,8 +1,6 @@
 module.exports = function (api) {
 	api.cache(true)
-	const presets = [
-		'module:metro-react-native-babel-preset',
-	]
+	const presets = ['module:metro-react-native-babel-preset']
 	let plugins = [
 		[
 			'module-resolver',
@@ -28,13 +26,11 @@ module.exports = function (api) {
 					'@hooks': './src/core/hooks.ts',
 					'@redux.store': './src/core/store.ts',
 					'@selectors': './src/core/selectors',
-					'@slices': './src/core/slices'
+					'@slices': './src/core/slices',
 				},
 			},
 		],
-		['@babel/plugin-proposal-decorators', { legacy: true }],
-		['@babel/plugin-proposal-class-properties', { loose: true }],
-		'react-native-reanimated/plugin'
+		'react-native-reanimated/plugin',
 	]
 
 	if (process.env.ENV === 'production') {
