@@ -2,10 +2,23 @@
 	"files.exclude": {
 		"**/node_modules": true,
 		"**/Pods": true,
-		"**/ios/Build": true
+		"**/ios/Build": true,
+		".watchmanconfig": true,
+		".prettierrc.js": true,
+		"bin": true,
+		"_bundle": true,
+		".gitattributes": true,
+		".gitignore": true,
+		".buckconfig": true,
+		".editorconfig": true,
+		".eslintignore": true,
+		".eslintrc.json": true,
+		"android": true,
+		"ios": true,
+		"metro.config.js": true,
+		"jest.config.js": true
 	},
 	"editor.formatOnSave": true,
-	"cSpell.words": [
-		"coinchecker"
-	]
+	"cSpell.words": [],
+	"jest.autoRun": false
 }
