@@ -34,6 +34,7 @@ import { store } from '@redux.store'
 import { navigationSlice } from '@slices'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
 import { LiveAnimationProvider } from '@components/live-animation'
+import { AppStateListener } from 'src/core/mmkv'
 
 const MainStack = createNativeStackNavigator<ReactNavigation.RootParamList>()
 
@@ -88,10 +89,7 @@ const App = () => {
 						screenOptions={{ headerShown: false }}
 						initialRouteName={getInitialRoute()}
 					>
-						<MainStack.Screen
-							name="Tab"
-							component={TabScreen}
-						/>
+						<MainStack.Screen name="Tab" component={TabScreen} />
 						<MainStack.Group
 							screenOptions={{ presentation: 'fullScreenModal' }}
 						>
@@ -112,6 +110,7 @@ function MainApp() {
 		<Provider store={store}>
 			<I18nextProvider i18n={i18n}>
 				<LiveAnimationProvider>
+					<AppStateListener />
 					<App />
 				</LiveAnimationProvider>
 			</I18nextProvider>
