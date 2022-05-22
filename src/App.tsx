@@ -34,7 +34,6 @@ import { store } from '@redux.store'
 import { navigationSlice } from '@slices'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
 import { LiveAnimationProvider } from '@components/live-animation'
-import { AppStateListener } from 'src/core/mmkv'
 
 const MainStack = createNativeStackNavigator<ReactNavigation.RootParamList>()
 
@@ -110,7 +109,6 @@ function MainApp() {
 		<Provider store={store}>
 			<I18nextProvider i18n={i18n}>
 				<LiveAnimationProvider>
-					<AppStateListener />
 					<App />
 				</LiveAnimationProvider>
 			</I18nextProvider>

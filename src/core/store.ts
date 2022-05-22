@@ -11,6 +11,7 @@ import {
 	uiconfigSlice,
 	navigationSlice,
 } from '@slices'
+import _ from 'lodash'
 import { MMKV } from 'react-native-mmkv'
 const memStorage = new MMKV()
 const reducers = combineReducers({
@@ -40,6 +41,19 @@ export const store = configureStore({
 	reducer: reducers,
 	middleware: middlewares,
 	preloadedState: onLoadPreloadState(),
+})
+
+const persistMem = _.debounce(
+	function () {
+		const currentState = store.getState()
+		const stateStr = JSON.stringify(currentState)
+		memStorage.set('APP_STATE', stateStr)
+	},
+	500,
+	{ maxWait: 2000 }
+)
+store.subscribe(() => {
+	persistMem()
 })
 
 // Infer the `RootState` and `AppDispatch` types from the store itself
