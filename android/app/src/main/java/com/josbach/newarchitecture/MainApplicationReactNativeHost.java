@@ -1,4 +1,4 @@
-package com.canix.newarchitecture;
+package com.josbach.newarchitecture;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
@@ -19,9 +19,9 @@ import com.facebook.react.fabric.CoreComponentsRegistry;
 import com.facebook.react.fabric.EmptyReactNativeConfig;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.uimanager.ViewManagerRegistry;
-import com.canix.BuildConfig;
-import com.canix.newarchitecture.components.MainComponentsRegistry;
-import com.canix.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+import com.josbach.BuildConfig;
+import com.josbach.newarchitecture.components.MainComponentsRegistry;
+import com.josbach.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import java.util.ArrayList;
 import java.util.List;
 

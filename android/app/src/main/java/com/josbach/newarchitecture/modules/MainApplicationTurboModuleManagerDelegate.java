@@ -1,4 +1,4 @@
-package com.canix.newarchitecture.modules;
+package com.josbach.newarchitecture.modules;
 
 import com.facebook.jni.HybridData;
 import com.facebook.react.ReactPackage;

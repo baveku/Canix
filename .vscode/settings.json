@@ -13,8 +13,8 @@
 		".editorconfig": true,
 		".eslintignore": true,
 		".eslintrc.json": true,
-		"android": true,
-		// "ios": true,
+		// "android": true,
+		"ios": true,
 		"metro.config.js": true,
 		"jest.config.js": true
 	},
