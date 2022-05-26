@@ -67,7 +67,7 @@
 			"@redux.store": ["./src/core/store.ts"],
 			"@slices": ["./src/core/slices"],
 			"@selectors": ["./src/core/selectors"],
-			"@theme": ["./src/theme"]
+			"@theme": ["./src/themes"]
 		}
 	},
 	"exclude": [
