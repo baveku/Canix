@@ -11,8 +11,10 @@ import { MMKV } from 'react-native-mmkv'
 // index.js
 if (__DEV__) {
 	require('react-native-performance-flipper-reporter').setupDefaultFlipperReporter()
-	require("react-native-mmkv-flipper-plugin").initializeMMKVFlipper({ default: new MMKV() })
+	require('react-native-mmkv-flipper-plugin').initializeMMKVFlipper({
+		default: new MMKV(),
+	})
 }
 
-LogBox.ignoreLogs(['Remote debugger', 'NativeBase', 'RCTBridge'])
+LogBox.ignoreAllLogs()
 AppRegistry.registerComponent(Config.APP_NAME, () => App)
