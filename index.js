@@ -17,4 +17,4 @@ if (__DEV__) {
 }
 
 LogBox.ignoreAllLogs()
-AppRegistry.registerComponent(Config.APP_NAME, () => App)
+AppRegistry.registerComponent('main', () => App)

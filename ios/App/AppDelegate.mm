@@ -39,7 +39,6 @@ static NSString *const kRNConcurrentRoot = @"concurrentRoot";
   RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
 
   // Find a line that define rootView and replace/edit with the following lines.
-  NSString *appName = [ReactNativeConfig envFor:@"APP_NAME"];
   #if RCT_NEW_ARCH_ENABLED
   _contextContainer = std::make_shared<facebook::react::ContextContainer const>();
   _reactNativeConfig = std::make_shared<facebook::react::EmptyReactNativeConfig const>();
@@ -49,7 +48,7 @@ static NSString *const kRNConcurrentRoot = @"concurrentRoot";
   #endif
 
   NSDictionary *initProps = [self prepareInitialProps];
-  UIView *rootView = RCTAppSetupDefaultRootView(bridge, @"RnDiffApp", initProps)
+  UIView *rootView = RCTAppSetupDefaultRootView(bridge, @"main", initProps)
 
   if (@available(iOS 13.0, *)) {
       rootView.backgroundColor = [UIColor systemBackgroundColor];
